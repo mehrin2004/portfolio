@@ -14,7 +14,7 @@
     <h1>Mehrin Kadhija</h1>
 
     <div class="menu-toggle" id="menu-toggle">
-        ☰
+        <i class="fa-solid fa-bars"></i>
     </div>
 
     <div class="links" id="nav-links">
@@ -166,9 +166,16 @@
 <script>
 const toggleBtn = document.getElementById("menu-toggle");
 const navLinks = document.getElementById("nav-links");
+const navItems = document.querySelectorAll("#nav-links a");
 
 toggleBtn.addEventListener("click", () => {
     navLinks.classList.toggle("active");
+});
+
+navItems.forEach(item => {
+    item.addEventListener("click", () => {
+        navLinks.classList.remove("active");
+    });
 });
 </script>
 </body>

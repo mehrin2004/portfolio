@@ -51,18 +51,19 @@ nav h1{
     color: var(--primary);
 }
 
-/* Toggle Button */
 .menu-toggle{
     display: none;
-    font-size: 30px;
+    font-size: 28px;
     cursor: pointer;
+    margin-left: auto;
 }
 
-/* Mobile Responsive */
-@media(max-width:768px){
+/* Mobile View */
+@media (max-width:768px){
 
     nav{
         padding: 20px;
+        position: relative;
     }
 
     .menu-toggle{
@@ -70,16 +71,17 @@ nav h1{
     }
 
     .links{
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 220px;
+        background: white;
         display: none;
         flex-direction: column;
-        position: absolute;
-        top: 75px;
-        left: 0;
-        width: 100%;
-        background: white;
-        padding: 20px 0;
-        text-align: center;
-        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+        gap: 0;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+        border-radius: 10px;
+        overflow: hidden;
     }
 
     .links.active{
@@ -87,7 +89,12 @@ nav h1{
     }
 
     .links a{
-        padding: 10px 0;
+        padding: 15px 20px;
+        border-bottom: 1px solid #eee;
+    }
+
+    .links a:last-child{
+        border-bottom: none;
     }
 }
 
